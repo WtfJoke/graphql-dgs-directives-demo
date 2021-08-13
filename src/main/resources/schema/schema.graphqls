@@ -16,7 +16,7 @@ type Rating {
 }
 
 input RatingInput {
-    title: String!
-    stars: Int!
-    releaseYear: Int
+    title: String! @NotBlank
+    stars: Int! @Range(min: 1, max: 5)
+    releaseYear: Int @Positive
 }

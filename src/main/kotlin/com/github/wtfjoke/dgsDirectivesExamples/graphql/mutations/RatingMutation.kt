@@ -11,11 +11,9 @@ import com.netflix.graphql.dgs.InputArgument
 class RatingMutation {
 
     @DgsMutation
-    fun addRating(@InputArgument ratingInput: RatingInput): Rating? {
-        val stars = ratingInput.stars
-        require(stars >= 1) { "Stars must be 1-5" }
-        val title = ratingInput.title
-        println("Rated $title with $stars stars")
+    fun addRating(@InputArgument rating: RatingInput): Rating? {
+        val stars = rating.stars
+        println("Rated ${rating.title} with $stars stars")
         return Rating(stars)
     }
 }
