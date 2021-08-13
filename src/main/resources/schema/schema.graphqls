@@ -1,0 +1,22 @@
+type Query {
+    movies(titleFilter: String): [Movie!]!
+}
+
+type Mutation {
+    addRating(rating: RatingInput!): Rating
+}
+
+type Movie {
+    title: String!
+    releaseYear: Int!
+}
+
+type Rating {
+    stars: Int
+}
+
+input RatingInput {
+    title: String!
+    stars: Int!
+    releaseYear: Int
+}
