@@ -7,7 +7,7 @@ type Mutation {
 }
 
 type Movie {
-    title: String!
+    title: String! @StringCase(case: UPPER)
     releaseYear: Int!
 }
 

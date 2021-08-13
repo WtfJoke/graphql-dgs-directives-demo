@@ -23,3 +23,9 @@ They get registered with DGS in [AddExtendedValidationDirectiveWiring](src/main/
 _Why can't I find the code for Movie/Rating?_  
 
 I use the [DGS Codegen Plugin](https://netflix.github.io/dgs/generating-code-from-schema/) to automatically generate them from the defined schema during the build.
+
+_What do I need to do for a custom directive?_  
+
+You need to implement `SchemaDirectiveWiring`, register it using `@DgsRuntimeWiring` and implement/override the method for each directiveLocation you implement (eg `onInputObjectType`, `onField` etc...)  
+
+See the example of [StringCaseDirective](src/main/kotlin/com/github/wtfjoke/dgsDirectivesExamples/graphql/directives/StringCaseDirective.kt)
