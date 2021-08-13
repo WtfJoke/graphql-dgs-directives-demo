@@ -25,7 +25,7 @@ dependencies {
 	implementation(platform("com.netflix.graphql.dgs:graphql-dgs-platform-dependencies:4.5.1"))
 	implementation("com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter")
 
-	// GraphQL validations directives - dgs uses graphql-java 16 under the hood so we use 16.x.x
+	// GraphQL validation directives - dgs uses graphql-java 16 under the hood, so we use 16.x.x
 	implementation("com.graphql-java:graphql-java-extended-validation:16.0.0")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")

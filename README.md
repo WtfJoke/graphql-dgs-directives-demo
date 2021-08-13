@@ -18,7 +18,7 @@ Repo to demonstrate using directives in GraphQL with [DGS Framework](https://net
 _How are the directives registered?_
 
 Most directives (Range/NotBlank...) are from the library [graphql-java/graphql-java-extended-validation](https://github.com/graphql-java/graphql-java-extended-validation).  
-They get registered with DGS in [DgsConfiguration#AddExtendedValidationDirectiveWiring](src/main/kotlin/com/github/wtfjoke/dgsDirectivesExamples/graphql/configuration/DgsConfiguration.kt)
+They get registered with DGS in [AddExtendedValidationDirectiveWiring](src/main/kotlin/com/github/wtfjoke/dgsDirectivesExamples/graphql/directives/wirings/AddExtendedValidationDirectiveWiring.kt)
 
 _Why can't I find the code for Movie/Rating?_  
 
