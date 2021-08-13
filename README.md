@@ -15,17 +15,17 @@ Repo to demonstrate using directives in GraphQL with [DGS Framework](https://net
 
 ## F.A.Q
 
-_How are the directives registered?_
+>How are the directives registered?
 
 Most directives (Range/NotBlank...) are from the library [graphql-java/graphql-java-extended-validation](https://github.com/graphql-java/graphql-java-extended-validation).  
 They get registered with DGS in [AddExtendedValidationDirectiveWiring](src/main/kotlin/com/github/wtfjoke/dgsDirectivesExamples/graphql/directives/wirings/AddExtendedValidationDirectiveWiring.kt)
 
-_Why can't I find the code for Movie/Rating?_  
+>Why can't I find the code for Movie/Rating?  
 
 I use the [DGS Codegen Plugin](https://netflix.github.io/dgs/generating-code-from-schema/) to automatically generate them from the defined schema during the build.
 
-_What do I need to do for a custom directive?_  
+>What do I need to do for a custom directive?  
 
-You need to implement `SchemaDirectiveWiring`, register it using `@DgsRuntimeWiring` and implement/override the method for each directiveLocation you implement (eg `onInputObjectType`, `onField` etc...)  
+You need to implement the interface `SchemaDirectiveWiring`, register it using `@DgsRuntimeWiring` and implement/override the method for each directiveLocation you implement (eg `onInputObjectType`, `onField` etc...)  
 
-See the example of [StringCaseDirective](src/main/kotlin/com/github/wtfjoke/dgsDirectivesExamples/graphql/directives/StringCaseDirective.kt)
+See [StringCaseDirective](src/main/kotlin/com/github/wtfjoke/dgsDirectivesExamples/graphql/directives/StringCaseDirective.kt) as an example of a custom directive.
